@@ -2,7 +2,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Trebuchet MS', sans-serif;
   background-color: #fff7f8;
   color: #555;
   line-height: 1.6;
@@ -10,7 +10,7 @@ body {
 
 /* Header */
 header {
-  background: linear-gradient(45deg, #fcbad3, #cce3e9);
+  background: linear-gradient(90deg, #5cb5a2, #b4b896);
   padding: 80px 20px;
   text-align: center;
   color: #333;
@@ -32,14 +32,24 @@ header p {
   text-align: center;
 }
 
-.section:nth-of-type(odd) {
+/* Special Backgrounds */
+.green-bg {
+  background-color: #e3f9e5; /* Light pastel green */
+}
+
+.mint-green-bg {
+  background-color: #d4f4ec; /* Soft mint green */
+}
+
+.section:nth-of-type(odd):not(.green-bg):not(.mint-green-bg) {
   background-color: #fefefe;
 }
 
-.section:nth-of-type(even) {
+.section:nth-of-type(even):not(.green-bg):not(.mint-green-bg) {
   background-color: #f9f9f9;
 }
 
+/* Section Titles */
 .section-title {
   font-size: 36px;
   color: #6a5acd;
@@ -56,16 +66,17 @@ header p {
 
 /* Cards */
 .card {
-  background: #fff;
+  background: #ffffff;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   max-width: 400px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
   transform: scale(1.03);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
 
 .card img {
@@ -81,10 +92,12 @@ header p {
 .card-content h2 {
   color: #6a5acd;
   margin-top: 0;
+  font-size: 24px;
 }
 
 .card-content p {
   margin-bottom: 20px;
+  font-size: 16px;
 }
 
 /* Buttons */
@@ -117,5 +130,21 @@ footer {
   .card-container {
     flex-direction: column;
     align-items: center;
+  }
+
+  header h1 {
+    font-size: 36px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .card-content h2 {
+    font-size: 20px;
+  }
+
+  .card-content p {
+    font-size: 15px;
   }
 }
