@@ -16,7 +16,7 @@ header{
 }
 
 a.navigation{
-    margin-left: 300px;
+    margin-left: 330px;
     font-size: 20px;
 }
 
@@ -24,3 +24,134 @@ h1.title{
     margin-top: 25px;
     font-size: 30px;
 }
+/*Birthday*/
+.Birthday{
+    margin-top: 0px;
+    margin-left: 50px;
+}
+
+#BirthdayTitle{
+    margin-left: 150px;
+    color: black;
+}
+
+.container {
+    position: absolute;
+    width: 50%;
+  }
+  
+  .image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50px;
+    right: 0;
+    height: 100%;
+    width: 55%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: teal;
+  }
+  
+  .container:hover .overlay {
+    opacity: 1;
+  }
+  
+  .text {
+    color: white;
+    font-size: 17px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+/*Wedding*/
+.Wedding{
+    margin-left: 440px;
+    display: block;
+}
+
+.weddingoverlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 440px;
+    right: 0;
+    height: 100%;
+    width: 55%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: teal;
+  }
+
+.container:hover .weddingoverlay {
+    opacity: 1;
+  }
+
+   
+  .weddingtext {
+    color: white;
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  #WeddingTitle{
+    margin-left: 550px;
+    color: black;
+  }
+
+/*Graduation*/
+  .Graduation{
+    margin-left: 860px;
+    display: block;
+}
+
+.graduationoverlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 860px;
+    right: 0;
+    height: 100%;
+    width: 55%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: teal;
+  }
+
+.container:hover .graduationoverlay {
+    opacity: 1;
+  }
+
+   
+  .graduationtext {
+    color: white;
+    font-size: 14.5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  #GraduationTitle{
+    margin-left: 950px;
+    color: black;
+  }
