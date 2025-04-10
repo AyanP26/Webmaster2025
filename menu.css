@@ -28,7 +28,7 @@ header p {
 }
 
 /* Section Styling */
-..menu-section {
+.menu-section {
     padding: 40px 20px;
     margin-bottom: 40px;
     border-radius: 12px;
