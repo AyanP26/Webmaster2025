@@ -155,3 +155,7 @@ h1.title{
     margin-left: 950px;
     color: black;
   }
+
+  .outerContainer{
+    display: flex;
+  }
