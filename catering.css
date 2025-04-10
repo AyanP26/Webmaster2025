@@ -1,12 +1,12 @@
-p {
-  margin: 0;
-  padding: 0;
-  font-family: 'Trebuchet MS', sans-serif;
-  background-color: #fff7f8;
-  color: #555;
-  line-height: 1.6;
-  text-align: center;
-}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', sans-serif;
+    background-color: #fff7f8;
+    color: #555;
+    line-height: 1.6;
+  }
+  
 
 .title {
 	color: #5C6AC4;
@@ -34,7 +34,6 @@ h2{
 }
 body{
   display: inline;
-  background-color: rgba(22, 206, 145, 0.715);
 }
 #body1{
   padding-right: 2px;
@@ -46,12 +45,28 @@ body{
  
 }
 #div1{
-width: 50%;
+width=50%
 margin-left: 5px;
 }
 #div2{
 flex-grow: 1;
 }
+
+}
+.desc{
+  display: inline-block;
+  margin-right: 40px;
+}
+#centermost{
+  margin-left: 10px;
+  margin-right: 10px; 
+}
+#leftmost{
+  margin-left: 50px;
+}
+#rightmost{
+ margin-right: 50px; 
+} 
 
 #maindiv{
 width: 100%;
@@ -76,25 +91,10 @@ display:flex;
   margin-left: 150px;
 }
 
-.desc{
-  display: inline-block;
-  margin-right: 40px;
-}
-#centermost{
-  margin-left: 10px;
-  margin-right: 10px; 
-}
-#leftmost{
-  margin-left: 50px;
-}
-#rightmost{
- margin-right: 50px; 
-}
 
 .textboxes{
   width: 30%;
   height: 100px;
- border: 5px solid green;
   padding: 5px;
   display: inline-block;
   word-wrap: break-word;
@@ -106,7 +106,8 @@ button {
   height:75px;
   margin-left: 37%;
   text-align: center;
-  font-size: 70px;
+  font-size: 55px;
+  background-color: #89CE7E;
   
 }
 .order{
@@ -125,15 +126,45 @@ button {
   float: left;
 }
 .food1{
-  vertical-align: text-top;
+  vertical-align: text-top
   display: inline-block;
 }
 .food2{
-  vertical-align: text-top;
+  vertical-align: text-top
   display: inline-block;
 }
 .food3{
-  vertical-align: text-top;
+  vertical-align: text-top
   display: inline-block;
 }
+.inputs{
+  margin-left: 42%;
+}
+#closebut{
+  background-color: red;
+  height:50px;
+  font-size: 30px;
+  margin-left: 43%;
+}
+#submitbut{
+  height:50px;
+  font-size: 30px;
+  margin-left: 43%;
 
+#open-button{
+  margin-left: 45%;
+}
+.button{
+  height:75px;
+  font-family: Trebuchet MS;
+  font-size: 50px;
+  margin-left: 41%;
+}
+#dropdown{
+  width:175px;
+  margin-left:45%;
+}
+#myform{
+  display: none;
+}
+}

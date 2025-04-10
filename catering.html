@@ -3,11 +3,11 @@
 <HTML>
 <HEAD>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="catering.css">
+  <link rel="stylesheet" href="styles.css">
 </HEAD>
 <body>
 <TITLE>
-Restaurant Name | Catering 
+Resturnat Name | Catering 
 </TITLE>
 <div id="titlebox">
   <h1>Catering</h1>
@@ -17,7 +17,7 @@ Restaurant Name | Catering
   <br>
   <div id="maindiv">
     <div id="div1">
-      <p id="body1"> _______ Catering is a service we offer to our customers that allows for
+      <p id="body1"> Catering is a service we offer to our customers that allows for
       you to easily provide our food to large groups of people with bulk orders and large trays </p>
     </div>
    
@@ -28,83 +28,132 @@ Restaurant Name | Catering
     </div>
   </div>
 <div id="imagebox">
-  <img class="imgs" id="firstpic" src="building.png" alt="Picture of Buisness Building">
-  <img class="imgs" id = "secondpic" src="party.png" alt="Picture of Party Cap">
-  <img class="imgs" id = "thirdpic" src="rose.png" alt="Picture of dove/symbol for a wedding">
+  <img class="imgs" id="firstpic" src="https://assets.onecompiler.app/43e56b4cu/43e3k6yqk/building.png" alt="Picture of Buisness BUilding">
+  <img class="imgs" src="https://assets.onecompiler.app/43e56b4cu/43e3k6yqk/256px-Twemoji12_1f389.svg.png" alt="Picture of Party Cap">
+  <img class="imgs" src="https://assets.onecompiler.app/43e56b4cu/43e3k6yqk/building.png" alt="Picture of dove/symbol for a wedding">
 </div>
 <br>
 <div class="textboxes">
   <p id="leftmost" class="desc">
-    Yap about good buisness formalYap about good buisness formal
+    Offering diverse and flavorful vegetarian catering options demonstrates a commitment to inclusivity and caters to the growing 
+    demand for plant-based choices, enhancing your business's appeal to a wider clientele.
   </p>
 </div>
 <div class="textboxes">
   <p id="centermost" class="desc">
-    Yap about how good party fun type stuff
+    Vegetarian catering provides a vibrant and interactive culinary experience for parties, ensuring all guests, regardless of dietary
+    restrictions, can enjoy delicious and satisfying food.
   </p>
 </div>
 <div class="textboxes">
   <p id="rightmost" class="desc">
-    Yap about how good good for important stuff like weddings Yap about how good good for important stuff like weddings
+    A thoughtfully curated vegetarian wedding menu adds a unique and memorable touch, reflecting modern values and accommodating 
+    diverse guest needs while maintaining elegance and sophistication.
   </p>
 </div>
 <br>
 <br>
-<button>Order Now</button>
+
+
+
+
+<button class="button" id="open-button" onclick="openForm()">Order Now</button>
+
+<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Order</h1>
+
+    <label class = "inputs" for="email"><b>Email</b></label>
+    <input class = "inputs" type="text" placeholder="Enter Email" name="email" required>
 <br>
+    <label class = "inputs" for="loc"><b>Address</b></label>
+    <input class = "inputs" type="text" placeholder="Enter Adress" name="psw" required>
 <br>
-<p class="form">Name</p>
-<input type="text" class="order" placeholder="Type your first&last name here.."></input>
+    <label class = "inputs" for="name"><b>Name</b></label>
+    <input class = "inputs" type="text" placeholder="First, Last" name="loc" required>
 <br>
+    <label class = "inputs" for="name"><b>Phone Number</b></label>
+    <input class = "inputs" type="number" placeholder="012-345-6789" name="p#" required>
 <br>
-<p class="form">Email Adress</p>
-<input type="text" class="order" placeholder="Type your email name here.."></input>
+    <label class = "inputs" for="name"><b>Occassion</b></label>
+    <input class = "inputs" type="text" placeholder="Event" name="event" required>
 <br>
+  <label class = "inputs" for="Dish Type"><b>Occassion</b></label><br>
+  <select class = "inputs" name="Dish" id="dish">
+     <option value="">Dish Option</option>
+    <option value="dish1">Make it yourself </option>
+    <option value="dish2">Trays</option>
+    <option value="dish3">Large Dish</option>
+  </select>
 <br>
-<p class="form">Location to Cater to</p>
-<input type="text" class="order" placeholder="Type your adress name here.."></input>
+    <label class = "inputs" for="more"><b>Further Specification</b></label>
+    <input class = "inputs" type="text" placeholder="Food Name" name="more" required>
 <br>
-<br>
-<p class="form">Type your phone number  here..</p>
-<input type="text" class="order" placeholder="123-456-7890"></input>
-<br>
-<br>
-<select name="Dish" id="dish">
-  <option value="">Dish Option _</option>
-  <option value="dish1">Dish 1</option>
-  <option value="dish2">Dish 2</option>
-  <option value="dish3">Dish 3</option>
-  <option value="dish4">Dish 4</option>
+    <button class="button" id="submitbut"type="submit" class="btn">Submit</button>
+    <br>
+    <button class="button" id="closebut" type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    
+
+  </form>
+</div>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+
+
   <br>
   <br>
 </select>
 <br>
- <img class="foodpics" class="food1" src="building.png" alt="Picture of Dish 1">
-<p class="food1" id = "desc1">For a fun and interactive catering experience, consider a "Build-Your-Own Asian Bowls" station. Offer a base 
-of fluffy jasmine rice, fragrant coconut rice, or savory lo mein noodles. For the main protein, provide options like marinated and grilled
-chicken or tofu for a Korean bulgogi flair, tender braised pork belly reminiscent of Taiwanese lu rou fan, and pan-seared salmon with a teriyaki
-glaze for a Japanese touch. A vibrant array of toppings would complete the experience, including pickled vegetables (daikon, carrots, cucumbers)
-, fresh herbs (cilantro, mint, Thai basil), crispy fried shallots or garlic, edamame, and a selection of flavorful sauces such as gochujang aioli,
-sweet chili sauce, and a ginger-soy dressing. This customizable approach allows guests to create their perfect Asian-inspired meal.</p>
+ <img class="foodpics" class="food1" src="https://assets.onecompiler.app/43e56b4cu/43e3k6yqk/building.png" alt="Picture of Dish 1">
+<p class="food1" id = "desc1">Large-Format Vegetable Sushi Platter: Create a visually stunning and communal dining experience with
+a large-format Japanese "Vegetable Sushi Platter," designed to serve twelve guests. This elaborate platter features a variety of 
+meticulously crafted vegetarian sushi rolls, including creamy avocado rolls, crisp cucumber rolls, sweet inari pockets filled with
+seasoned sushi rice, and crunchy vegetable tempura rolls. Accompanying the sushi would be a generous portion of vibrant seaweed 
+salad (wakame), thinly sliced pickled ginger (gari) for palate cleansing, and a dollop of fiery wasabi. Offer a selection of 
+high-quality soy sauces, including a low-sodium option, and a spicy chili sauce for dipping, enhancing the flavorful and interactive
+dining experience.
+
+</p>
 <br>
 <br>
-<img class="foodpics" class="food2" src="building.png" alt="Picture of Dish 2">
-<p class="food2" id = "desc2">Another excellent catering option is a selection of distinct cuisine-focused trays. An Indian tray could
-feature a medley of flavorful appetizers like vegetable samosas with tamarind chutney, chicken tikka skewers, and paneer pakoras served
-with mint-coriander dip. A North African tray might showcase mini chicken tagines with apricots and almonds, flavorful couscous salad
-with roasted vegetables, and spiced lamb kofta with a cooling yogurt sauce. Finally, an East Asian tray could offer delicate vegetable
-spring rolls with a sweet and sour dipping sauce, crispy wontons filled with savory pork and shrimp, and edamame sprinkled with sea salt
-, providing a diverse culinary journey across the continent.</p>
 <br>
 <br>
-<img class="foodpics" class="food3" src="building.png" alt="Picture of Dish 3">
-<p class="food3" id = "desc3">For a truly impressive centerpiece, consider a large-format Vietnamese "Banh Hoi Thit Nuong Platter"
-designed to serve twelve. This elaborate dish features a generous bed of fine rice vermicelli noodles (banh hoi) woven into delicate
-bundles. Accompanying the noodles would be a substantial portion of grilled marinated pork (thit nuong) sliced thinly and fragrant
-with lemongrass and fish sauce. The platter would also include an abundance of fresh herbs such as mint, cilantro, and perilla,
-crisp lettuce leaves for wrapping, pickled carrots and daikon, and a variety of dipping sauces, including the essential nuoc cham
-(fish sauce dipping sauce), a peanut sauce, and a spicy chili sauce. This communal and interactive dish offers a vibrant and
-flavorful taste of Vietnamese cuisine.</p>
+<img class="foodpics" class="food2" src="https://assets.onecompiler.app/43e56b4cu/43e3k6yqk/building.png" alt="Picture of Dish 2">
+<p class="food2" id = "desc2">Create an engaging, interactive meal with a "Build-Your-Own Asian Lettuce Wraps" station. Offer a variety
+
+of bases: crisp butter lettuce cups, delicate rice paper wrappers, and fluffy steamed buns. Fillings include marinated and grilled tofu
+
+with a spicy Korean gochujang glaze, a savory mushroom stir-fry featuring shiitake and oyster mushrooms in a ginger-soy sauce, and tender
+
+jackfruit rendang, slow-cooked in a rich coconut curry. A vibrant array of toppings, such as pickled carrots and daikon, fresh cilantro 
+
+and mint, toasted peanuts, and a selection of sauces like a creamy peanut sauce, a tangy sweet chili glaze, and a fragrant ginger-soy 
+
+dressing, allows guests to personalize their wraps.
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<img class="foodpics" class="food3" src="https://assets.onecompiler.app/43e56b4cu/43e3k6yqk/building.png" alt="Picture of Dish 3">
+<p class="food3" id = "desc3">Vegetarian Cuisine Trays: Design a diverse and flavorful catering spread with individual vegetarian 
+trays, each highlighting a distinct cuisine. An Indian tray could feature crispy vegetable samosas served with sweet and tangy 
+tamarind chutney, succulent paneer tikka skewers marinated in a fragrant yogurt and spice blend, and a comforting aloo gobi (potato
+and cauliflower curry) accompanied by warm, freshly baked naan bread. A North African tray might showcase a fragrant vegetable tagine,
+slow-cooked with apricots, prunes, and almonds, a refreshing couscous salad tossed with roasted vegetables and fresh herbs, and crispy
+spiced chickpea fritters (falafel) served with a cooling yogurt-mint sauce. An East Asian tray could include delicate vegetable spring
+rolls with a creamy peanut dipping sauce, crispy vegetable tempura with a light soy-ginger dip, and edamame sprinkled with flaky sea 
+salt, offering a well-rounded and globally inspired vegetarian feast. </p>
 <br>
 </body>
 </HTML>
