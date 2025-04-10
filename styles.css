@@ -5,6 +5,7 @@ p {
   background-color: #fff7f8;
   color: #555;
   line-height: 1.6;
+  text-align: center;
 }
 
 .title {
@@ -89,5 +90,39 @@ display:flex;
 }
 .imgs{
   margin-right: 50px;
+}
+button {
+  height:75px;
+  margin-left: 37%;
+  text-align: center;
+  font-size: 70px;
+  
+}
+.order{
+  margin-left: 42%;
+}
+#dish{
+  margin-left: 45.5%;
+  width:100px;
+  height:30px;
+}
+
+.foodpics{
+  width:450px;
+  height:275px;
+  margin-left: 75px;
+  float: left;
+}
+.food1{
+  vertical-align: text-top
+  display: inline-block;
+}
+.food2{
+  vertical-align: text-top
+  display: inline-block;
+}
+.food3{
+  vertical-align: text-top
+  display: inline-block;
 }
 }
