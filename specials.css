@@ -4,26 +4,40 @@ body {
   padding: 0;
   font-family: 'Trebuchet MS', sans-serif;
   background-color: #fff7f8;
-  color: #555;
-  line-height: 1.6;
+  color: #000000;
+  line-height: 1.75;
 }
 
 /* Header */
 header {
-  background: linear-gradient(90deg, #5cb5a2, #b4b896);
+  /*background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("free-photo-of-mexican-food-on-plates.jpeg");
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 275px;
   padding: 80px 20px;
   text-align: center;
-  color: #333;
+  color: #fcffff;*/
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("free-photo-of-mexican-food-on-plates.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover; /* or try 'contain' */
+  background-position: center center;
+  position: relative;
+  height: 300px;
+  padding: 80px 20px;
+  text-align: center;
+  color: #fcffff;
 }
 
 header h1 {
-  font-size: 48px;
-  margin-bottom: 10px;
+  font-size: 60px;
 }
 
 header p {
-  font-size: 20px;
-  margin: 0;
+  font-size: 30px;
+  margin-bottom: 5px;
+  padding: 0px 0px;
 }
 
 /* Section Styling */
@@ -51,8 +65,8 @@ header p {
 
 /* Section Titles */
 .section-title {
-  font-size: 36px;
-  color: #6a5acd;
+  font-size: 40px;
+  color: #000000;
   margin-bottom: 40px;
 }
 
@@ -90,7 +104,7 @@ header p {
 }
 
 .card-content h2 {
-  color: #6a5acd;
+  color: #000000;
   margin-top: 0;
   font-size: 24px;
 }
