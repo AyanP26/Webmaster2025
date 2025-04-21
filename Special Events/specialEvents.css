@@ -8,11 +8,15 @@ body{
 }
 
 header{
-    background: linear-gradient(90deg, #5cb5a2, #b4b896);
-    padding: 40px 20px;
-    text-align: center;
-    color: #333;
-    font-size: 25px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("free-photo-of-mexican-food-on-plates.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover; /* or try 'contain' */
+  background-position: center center;
+  position: relative;
+  height: 300px;
+  padding: 80px 20px;
+  text-align: center;
+  color: #fcffff;
 }
 
 a.navigation{
