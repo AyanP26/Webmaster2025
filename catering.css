@@ -103,7 +103,7 @@ their respective textboxes*/
 /*start of css for textboxes*/
 
 .textboxes{
-  width: 31.49%;
+  width: 30%;
   height: 120px;
   padding: 5px;
   display: inline-block;
@@ -130,7 +130,6 @@ color:white;
 }
 #rightdiv{
    background-color: #D9D9D9;
-   
 }
 #centerdiv{
     background-color: #2FBC98;
@@ -151,13 +150,14 @@ button {
   width:100px;
   height:30px;
 }
-/*control ht epictures of food and their
+/*control the pictures of food and their
 respective descriptions*/
 .foodpics{
   width:450px;
   height:275px;
   margin-left: 75px;
   float: left;
+  margin-right:25px;
 }
 .food1{
   vertical-align: text-top
@@ -203,4 +203,13 @@ respective descriptions*/
 #myform{
   display: none;
 }
+#foodimg1{
 
+}
+.menubut{
+  background-color: #5F0000;
+
+}
+.buttonholder{
+    margin-left: 40px;
+}
