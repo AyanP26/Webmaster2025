@@ -1,0 +1,77 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+navbar{
+    background: #0B775B;
+    padding:25px;
+    align-items: center;
+    display: flex;
+    margin: 0;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: "Trebuchet MS";
+    font-size: 20px;
+    justify-content: center;
+    color: white;
+    display: flex;
+    gap: 20px;
+}
+
+.hero{
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("images/hero.png");
+    background-position:center;
+    background-size:cover;
+    position: relative;
+    margin: 0;
+    height:500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero h1, p{
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-align: center;
+}
+
+.hero h1{
+    font-size: 50px;
+}
+
+.hero p{
+    font-size: 30px;
+}
+
+.hero-buttons{
+    margin-top: 30px;
+    display: flex;
+    gap: 30px;
+}
+.button{
+    background: #5f0000;
+    border: none;
+    padding: 10px 20px;
+}
+
+.button p{
+    font-size: 20px;
+}
+
+.button2{
+    background: #2FBC98;
+    border: none;
+    padding: 10px 20px;
+}
+
+.button2 p{
+    font-size: 20px;
+}
