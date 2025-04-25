@@ -5,10 +5,10 @@ body {
     background-color: #fff7f8;
     color: #555;
     line-height: 1.6;
-      margin-top:0px;
+      margin-top: 0px;
   }
   
- *{border: 1px solid red}
+
 
 .title {
 	color: #5C6AC4;
@@ -21,7 +21,7 @@ body {
   background-size: cover;
   position: relative;
   margin-bottom: 30px;
-  margin-top:0px;
+  margin-top: 0px;
 }
 
 .hero-text {
@@ -247,9 +247,20 @@ respective descriptions*/
 
 }
 
-#ans{
+#ans1{
   display: none;
-  border: 1px solid red
+}
+#ans2{
+  display: none;
+}
+#ans3{
+  display: none;
+}
+#ans4{
+  display: none;
+}
+#an51{
+  display: none;
 }
 
 .que{
@@ -260,4 +271,7 @@ respective descriptions*/
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+}
+#myForm{
+  display: none;
 }
