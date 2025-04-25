@@ -5,21 +5,52 @@ body {
     background-color: #fff7f8;
     color: #555;
     line-height: 1.6;
+      margin-top:0px;
   }
   
+ *{border: 1px solid red}
 
 .title {
 	color: #5C6AC4;
 }
-#titlebox{
-   background: linear-gradient(90deg, #5cb5a2, #b4b896);
-  padding: 80px 20px;
-  text-align: center;
-  vertical-align: center;
-  color: #333;
-  font-size: 48px;
-  margin-bottom: 10px;
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("herocater.jpeg");
+  height: 250px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 30px;
+  margin-top:0px;
 }
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.hero-text button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 10px 25px;
+  color: black;
+  background-color: #ddd;
+  text-align: center;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+  color: white;
+}
+
+
+
 h1, h2{
   text-align: center;
 
@@ -66,6 +97,7 @@ margin-bottom: 25px;
 their respective textboxes*/
 #imagebox{
   display: inline;
+  margin-left: 75px;
 }
 #imagedivs1{
   display: inline-block;
@@ -101,9 +133,13 @@ their respective textboxes*/
  
 }
 /*start of css for textboxes*/
+#textboxbox{
+    display: inline;
+  margin-left: 75px;
+}
 
 .textboxes{
-  width: 30%;
+  width: 413.5px;
   height: 120px;
   padding: 5px;
   display: inline-block;
@@ -135,13 +171,16 @@ color:white;
     background-color: #2FBC98;
 }
 /*other stuff*/
-button {
+.button{
   height:75px;
-  margin-left: 37%;
-  text-align: center;
-  font-size: 55px;
-  background-color: #89CE7E;
+  font-family: Trebuchet MS;
+  font-size: 50px;
+  margin-left: 41%;
 }
+
+
+
+
 .order{
   margin-left: 42%;
 }
@@ -186,15 +225,9 @@ respective descriptions*/
   height:50px;
   font-size: 30px;
   margin-left: 43%;
-
-#open-button{
-  margin-left: 45%;
 }
-.button{
-  height:75px;
-  font-family: Trebuchet MS;
-  font-size: 50px;
-  margin-left: 41%;
+#openbutton{
+  margin-left: 45%;
 }
 #dropdown{
   width:175px;
@@ -208,8 +241,23 @@ respective descriptions*/
 }
 .menubut{
   background-color: #5F0000;
+  width: 125px;
+  height: 50px;
+  color: white;
 
 }
-.buttonholder{
-    margin-left: 40px;
+
+#ans{
+  display: none;
+  border: 1px solid red
+}
+
+.que{
+  background-color: #fff7f8;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }

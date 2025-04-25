@@ -2,16 +2,22 @@
 <!DOCTYPE html>
 <HTML>
 <HEAD>
+  <title>
+Catering 
+</title>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="catering.css">
 </HEAD>
 <body>
-<TITLE>
-Catering 
-</TITLE>
-<div id="titlebox">
-  <h1>Catering</h1>
+ 
+ <div class="hero-image">
+  <div class="hero-text">
+    <h1 style="font-size:50px">Catering</h1>
+    <p>The Future of Flavor: Vibrant Vegetarian Options</p>
+    <button>Order Now</button>
+  </div>
 </div>
+
    <h2 id="header1">Catering Information</h2>
    <h2>Catering Specials</h2>
   <br>
@@ -39,31 +45,33 @@ Catering
     </div>
 </div>
 <br>
-<div id="leftdiv" class="textboxes">
-  <p id="leftmost" class="desc">
-    Offering diverse and flavorful vegetarian catering options demonstrates a commitment to inclusivity and caters to the growing 
-    demand for plant-based choices, enhancing your business's appeal to a wider clientele.
-  </p>
-</div>
-<div id="rightdiv"class="textboxes">
-  <p id="centermost" class="desc">
-    Vegetarian catering provides a vibrant and interactive culinary experience for parties, ensuring all guests, regardless of dietary
-    restrictions, can enjoy delicious and satisfying food.
-  </p>
-</div>
-<div id="centerdiv" class="textboxes">
-  <p id="rightmost" class="desc">
-    A thoughtfully curated vegetarian wedding menu adds a unique and memorable touch, reflecting modern values and accommodating 
-    diverse guest needs while maintaining elegance and sophistication.
-  </p>
-</div>
+<div id="textboxbox">
+  <div id="leftdiv" class="textboxes">
+    <p id="leftmost" class="desc">
+      Offering diverse and flavorful vegetarian catering options demonstrates a commitment to inclusivity and caters to the growing 
+      demand for plant-based choices, enhancing your business's appeal to a wider clientele.
+    </p>
+  </div>
+  <div id="rightdiv"class="textboxes">
+    <p id="centermost" class="desc">
+      Vegetarian catering provides a vibrant and interactive culinary experience for parties, ensuring all guests, regardless of dietary
+      restrictions, can enjoy delicious and satisfying food.
+    </p>
+  </div>
+  <div id="centerdiv" class="textboxes">
+    <p id="rightmost" class="desc">
+      A thoughtfully curated vegetarian wedding menu adds a unique and memorable touch, reflecting modern values and accommodating 
+      diverse guest needs while maintaining elegance and sophistication.
+    </p>
+  </div>
+  </div>
 <br>
 <br>
 
 
 
 
-<button class="button" id="open-button" onclick="openForm()">Order Now</button>
+<button class="button" id="openbutton" onclick="openForm()">Order Now</button>
 
 <div class="form-popup" id="myForm">
   <form action="/action_page.php" class="form-container">
@@ -104,6 +112,7 @@ Catering
 </div>
 
 <script>
+  
 function openForm() {
   document.getElementById("myForm").style.display = "block";
 }
@@ -111,15 +120,16 @@ function openForm() {
 function closeForm() {
   document.getElementById("myForm").style.display = "none";
 }
-</script>
 
+  
+</script>
 
 
   <br>
   <br>
 </select>
 <br>
- <img class="foodpics" class="food1" src="fork.png" alt="Picture of Dish 1">
+ <img class="foodpics" class="food1" src="sushi.png" alt="Picture of Dish 1">
 <ul class="food1" id = "desc1">
 
 <li>Large-Format Presentation: Designed to serve twelve guests, creating a visually stunning
@@ -127,13 +137,15 @@ function closeForm() {
 <li>Variety of Vegetarian Sushi Rolls:</li>
 </ul>
 <br>
-<div class="buttonholder">
+
 <button class="menubut">View Menu</button>
-</div>
 <br>
 <br>
 <br>
-<img class="foodpics" class="food2" src="newparty.png" alt="Picture of Dish 2">
+<br>
+<br>
+<br>
+<img class="foodpics" class="food2" src="lettuce.png" alt="Picture of Dish 2">
 <ul class="food2" id = "desc2">
 
 <li>Variety of Bases</li>
@@ -142,13 +154,14 @@ function closeForm() {
 <li>Personalized Wraps: Allows guests to create their own customized meals</li>
 </ul>
 <br>
-<div class="buttonholder">
+
 <button class="menubut">View Menu</button>
-</div>
+
 <br>
 <br>
 <br>
-<img class="foodpics" class="food3" src="wrose.png" alt="Picture of Dish 3">
+<br>
+<img class="foodpics" class="food3" src="trays.png" alt="Picture of Dish 3">
 <p>Interactive "Build-Your-Own" Station: Creates an engaging and customizable
 meal experience with a....</p>
 <ul class="food3" id = "desc3">
@@ -158,9 +171,101 @@ Each tray highlights a unique cuisine for a flavorful catering spread.</li>
 culinary experience.</li>
 </ul>
 <br>
-<div class="buttonholder">
+
 <button class="menubut">View Menu</button>
-</div>
 <br>
+<br>
+<br>
+<h1>FAQ's</h1>
+
+<button class="que" onclick="openAns()">Question?</button>
+
+<div id="ans">
+    <p>Answer</p>
+</div>
+
+<script>
+  
+  function openAns() {
+  if(document.getElementById("ans").style.display == "block"){
+  document.getElementById("ans").style.display = "none";
+  }
+  else{
+    document.getElementById("ans").style.display = "block";
+  }
+}
+  
+</script>
+
+<br>
+
+<button class="que" onclick="openAns()">Question?</button>
+
+<div id="ans1">
+    <p>Answer</p>
+</div>
+
+<script>
+  
+  function openAns() {
+  if(document.getElementById("ans2").style.display == "block"){
+  document.getElementById("ans2").style.display = "none";
+  }
+  else{
+    document.getElementById("ans2").style.display = "block";
+  }
+}
+  
+</script>
+
+
+<br>
+
+
+<button class="que" onclick="openAns()">Question?</button>
+
+<div id="ans3">
+    <p>Answer</p>
+</div>
+
+<script>
+  
+  function openAns() {
+  if(document.getElementById("ans3").style.display == "block"){
+  document.getElementById("ans3").style.display = "none";
+  }
+  else{
+    document.getElementById("ans3").style.display = "block";
+  }
+}
+  
+</script>
+
+
+
+
+<button class="que" onclick="openAns()">Question?</button>
+
+<div id="ans4">
+    <p>Answer</p>
+</div>
+
+<script>
+  
+  function openAns() {
+  if(document.getElementById("ans4").style.display == "block"){
+  document.getElementById("ans4").style.display = "none";
+  }
+  else{
+    document.getElementById("ans4").style.display = "block";
+  }
+}
+  
+</script>
+
+
+
+
+
 </body>
 </HTML>
