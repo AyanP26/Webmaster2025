@@ -244,6 +244,11 @@ respective descriptions*/
   width: 125px;
   height: 50px;
   color: white;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-decoration: none
 
 }
 
@@ -274,4 +279,8 @@ respective descriptions*/
 }
 #myForm{
   display: none;
+}
+
+#faq{
+  text-align: center;
 }
