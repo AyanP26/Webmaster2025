@@ -75,3 +75,11 @@ ul{
 .button2 p{
     font-size: 20px;
 }
+
+h2{
+    margin: 0;
+    padding: 0;
+    color: black;
+    text-align: center;
+    font-size: 50px;
+}
