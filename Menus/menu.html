@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Willow Whisper's Menu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Merriweather:wght@300&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Merriweather', serif;
+      background-color: #2fbc98;   
+      color: #2a2a2a;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .book-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: calc(100vh - 60px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .book {
+      display: flex;
+      width: 90vw;
+      max-width: 1200px;
+      height: 90vh;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      background-color: #e3f9e5;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .page {
+      flex: 1;
+      padding: 3rem;
+      overflow-y: auto;
+      height: 100%;
+      width: 50%;
+      transition: transform 0.6s ease;
+      backface-visibility: hidden;
+    }
+
+    .book.flipping .page {
+      transform: rotateY(180deg);
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      color: #4b2e83;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #4b2e83;
+      padding-bottom: 0.5rem;
+    }
+
+    h3 {
+      margin-top: 2rem;
+      color: #3e2c41;
+    }
+
+    .item-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      margin-top: 1.5rem;
+      font-weight: 600;
+      color: #3e2c41;
+    }
+
+    .item-desc {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      color: #5a4e56;
+    }
+
+    .slider-controls {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 1rem;
+      z-index: 10;
+    }
+
+    .slider-controls button {
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .slider-controls button:hover {
+      background: #eee;
+    }
+
+    .nav-buttons {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+      font-size: 2rem;
+      color: #4b2e83;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding: 0 1rem;
+    }
+
+    .prev, .next {
+      cursor: pointer;
+    }
+
+    .prev:hover, .next:hover {
+      color: #333;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 60px;
+      background-color: #333;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 0.9rem;
+      z-index: 5;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="book-container">
+    <div class="book" id="book">
+      <div class="page" id="leftPage"></div>
+      <div class="page" id="rightPage"></div>
+    </div>
+    <div class="nav-buttons">
+      <span class="prev" onclick="prevSlide()">←</span>
+      <span class="next" onclick="nextSlide()">→</span>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 The Willow Whisper | All Rights Reserved | <br />
+    Allergen Key: 🌱 - Gluten | 🧆 - Soy | 🥥 - Coconut | 🍞 - Wheat | 🥜 - Nuts | 🧴 - Dairy
+  </footer>
+
+  <script>
+    const slides = [
+      [
+        `<h2 class='section-title'>Appetizers</h2>
+        <div class='item-name'>Delicately Rolled Vegetable Parcels - ($6) 🌱</div>
+        <div class='item-desc'>Crispy spring rolls filled with shredded vegetables.</div>
+        <div class='item-name'>Golden Samosas - ($5) 🧆</div>
+        <div class='item-desc'>Pastry pockets with spiced potatoes and peas.</div>
+        <div class='item-name'>Crispy Cauliflower Bites - ($7) 🥜</div>
+        <div class='item-desc'>Battered and deep-fried cauliflower with dipping sauce.</div>
+        <div class='item-name'>Spinach and Feta Puffs - ($5) 🧴</div>
+        <div class='item-desc'>Pastry puffs filled with spinach and vegan feta.</div>
+        <div class='item-name'>Mango Salad - ($4) 🥥</div>
+        <div class='item-desc'>Refreshing mango, mint, and lime salad.</div>
+        <div class='item-name'>Crispy Vegan Tofu Bites - ($7) 🧆</div>
+        <div class='item-desc'>Crispy tofu cubes with dipping sauce.</div>
+        <div class='item-name'>Mini Falafel - ($5) 🥜</div>
+        <div class='item-desc'>Small falafel balls served with hummus and pita.</div>`, 
+
+        `<h2 class='section-title'>Entrees</h2>
+        <div class='item-name'>Gochujang Green Beans - ($8) 🧆</div>
+        <div class='item-desc'>Spicy beans in tangy Korean sauce.</div>
+        <div class='item-name'>Vegan Tacos - ($9) 🌱</div>
+        <div class='item-desc'>Tacos filled with grilled vegetables, avocado, and salsa.</div>
+        <div class='item-name'>Stuffed Bell Peppers - ($10) 🧴</div>
+        <div class='item-desc'>Bell peppers stuffed with quinoa and veggies.</div>
+        <div class='item-name'>Vegan Pad Thai - ($12) 🧆</div>
+        <div class='item-desc'>Rice noodles with tofu, peanuts, and a tangy sauce.</div>
+        <div class='item-name'>Vegan Mac 'n' Cheese - ($8) 🧴</div>
+        <div class='item-desc'>Creamy mac and cheese with plant-based ingredients.</div>
+        <div class='item-name'>Vegan Burger - ($11) 🧴</div>
+        <div class='item-desc'>Plant-based patty with all the fixings.</div>
+        <div class='item-name'>Eggplant Parmesan - ($12) 🧴</div>
+        <div class='item-desc'>Breaded eggplant slices with marinara and vegan cheese.</div>`
+      ],
+      [
+        `<h2 class='section-title'>Side Dishes/Add-ons</h2>
+        <div class='item-name'>Crispy Fried Tofu - ($5) 🧆</div>
+        <div class='item-desc'>Tofu cubes with soy dipping sauce.</div>
+        <div class='item-name'>Grilled Vegetables - ($6) 🥜</div>
+        <div class='item-desc'>Seasonal veggies grilled with a savory marinade.</div>
+        <div class='item-name'>Fries - ($4) 🌱</div>
+        <div class='item-desc'>Crispy golden fries, served with dipping sauces.</div>
+        <div class='item-name'>Quinoa Salad - ($7) 🥥</div>
+        <div class='item-desc'>A refreshing salad with quinoa, greens, and citrus dressing.</div>
+        <div class='item-name'>Garlic Bread - ($5) 🍞</div>
+        <div class='item-desc'>Toasted bread topped with garlic and herbs.</div>
+        <div class='item-name'>Sweet Potato Fries - ($5) 🌱</div>
+        <div class='item-desc'>Crispy sweet potato fries with a side of ketchup.</div>
+        <div class='item-name'>Cauliflower Rice - ($5) 🥥</div>
+        <div class='item-desc'>Low-carb cauliflower rice served with your choice of sauce.</div>`, 
+
+        `<h2 class='section-title'>Kids Menu</h2>
+        <div class='item-name'>Mini Vegetable Sushi - ($4) 🥥</div>
+        <div class='item-desc'>Small veggie rolls with cucumber and avocado.</div>
+        <div class='item-name'>Mini Tacos - ($5) 🧆</div>
+        <div class='item-desc'>Tacos with spiced veggies and cheese.</div>
+        <div class='item-name'>Veggie Nuggets - ($5) 🧴</div>
+        <div class='item-desc'>Crispy veggie nuggets served with dipping sauce.</div>
+        <div class='item-name'>Fruit Cup - ($3) 🥥</div>
+        <div class='item-desc'>Assorted fresh fruit cup for kids.</div>
+        <div class='item-name'>Mini Pizza - ($7) 🍞</div>
+        <div class='item-desc'>A small pizza topped with tomato and vegan cheese.</div>
+        <div class='item-name'>Mac 'n' Cheese Bites - ($6) 🧴</div>
+        <div class='item-desc'>Mini bites of vegan mac and cheese, perfect for kids.</div>
+        <div class='item-name'>Veggie Wraps - ($6) 🌱</div>
+        <div class='item-desc'>Whole wheat wraps filled with vegetables and hummus.</div>`
+      ],
+      [
+        `<h2 class='section-title'>Beverages</h2>
+        <div class='item-name'>Iced Jasmine Green Tea - ($3) 🧆</div>
+        <div class='item-desc'>Floral chilled green tea.</div>
+        <div class='item-name'>Lemonade - ($3) 🧴</div>
+        <div class='item-desc'>Sweet and tart lemonade made with fresh lemons.</div>
+        <div class='item-name'>Horchata - ($4) 🥥</div>
+        <div class='item-desc'>Cinnamon rice milk drink from Latin America.</div>
+        <div class='item-name'>Coconut Water - ($3) 🥥</div>
+        <div class='item-desc'>Refreshing natural coconut water.</div>
+        <div class='item-name'>Mint Mojito - ($6) 🧴</div>
+        <div class='item-desc'>Non-alcoholic version of the classic mojito with mint and lime.</div>
+        <div class='item-name'>Green Smoothie - ($5) 🧆</div>
+        <div class='item-desc'>Spinach, kale, apple, and lemon blended into a refreshing smoothie.</div>
+        <div class='item-name'>Iced Matcha Latte - ($5) 🧴</div>
+        <div class='item-desc'>Matcha blended with oat milk and served over ice.</div>`, 
+
+        `<h2 class='section-title'>Desserts</h2>
+        <div class='item-name'>Chocolate Cake - ($5) 🧴</div>
+        <div class='item-desc'>Rich, decadent vegan chocolate cake.</div>
+        <div class='item-name'>Churros - ($5) 🧆</div>
+        <div class='item-desc'>Golden fried churros with cinnamon sugar.</div>
+        <div class='item-name'>Coconut Macaroons - ($4) 🥥</div>
+        <div class='item-desc'>Chewy coconut macaroons with a chocolate drizzle.</div>
+        <div class='item-name'>Fruit Sorbet - ($4) 🥥</div>
+        <div class='item-desc'>A refreshing fruit sorbet in various flavors.</div>
+        <div class='item-name'>Lemon Bars - ($4) 🧴</div>
+        <div class='item-desc'>Sweet and tangy lemon bars with a crumbly crust.</div>
+        <div class='item-name'>Vegan Cheesecake - ($6) 🧆</div>
+        <div class='item-desc'>Rich and creamy vegan cheesecake with a berry compote.</div>
+        <div class='item-name'>Chocolate Avocado Mousse - ($5) 🥥</div>
+        <div class='item-desc'>Smooth and creamy mousse made from avocado and cacao.</div>`
+      ]
+    ];
+
+    let currentSlide = 0;
+
+    function displaySlide() {
+      const leftPage = document.getElementById('leftPage');
+      const rightPage = document.getElementById('rightPage');
+      leftPage.innerHTML = slides[currentSlide][0];
+      rightPage.innerHTML = slides[currentSlide][1];
+    }
+
+    function prevSlide() {
+      currentSlide = (currentSlide === 0) ? slides.length - 1 : currentSlide - 1;
+      displaySlide();
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide === slides.length - 1) ? 0 : currentSlide + 1;
+      displaySlide();
+    }
+
+    displaySlide();
+  </script>
+</body>
+</html>
