@@ -1,0 +1,342 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Trebuchet MS";
+  line-height: 1.5;
+}
+
+navbar {
+  background: #0b775b;
+  padding: 25px;
+  align-items: center;
+  display: flex;
+  margin: 0;
+}
+
+button {
+  border: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Trebuchet MS";
+  font-size: 20px;
+  justify-content: center;
+  color: white;
+  display: flex;
+  gap: 20px;
+}
+
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("images/hero.png");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero h1 {
+  margin: 0;
+  padding: 0;
+  color: white;
+  text-align: center;
+  font-size: 50px;
+}
+
+.hero p {
+  margin: 0;
+  padding: 0;
+  color: white;
+  text-align: center;
+  font-size: 30px;
+}
+
+.hero-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 30px;
+}
+.button {
+  background: #5f0000;
+  border: none;
+  padding: 10px 20px;
+}
+
+.button p {
+  font-size: 20px;
+}
+
+.button2 {
+  background: #2fbc98;
+  border: none;
+  padding: 10px 20px;
+}
+
+.button2 p {
+  font-size: 20px;
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+  color: black;
+  text-align: center;
+  font-size: 50px;
+}
+
+.Meals {
+  background-image: url("images/leafs_bg.png");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: 650px;
+  margin-top: 0;
+  padding: 50px;
+}
+
+.Meals h1 {
+  font-size: 50px;
+  padding: 0;
+  margin: 0;
+}
+
+.mealCard {
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.5) 2px 2px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.mealCard h2 {
+  font-size: 40px;
+  font-weight: lighter;
+}
+.mealcontainer {
+  display: flex;
+  justify-self: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.mealcontainer h1 {
+  text-align: center;
+}
+
+.mealCards {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.dates {
+  background-color: #5f0000;
+  display: flex;
+  padding: 50px;
+  gap: 40px;
+  align-items: center;
+}
+
+.dates h1 {
+  font-size: 50px;
+  color: white;
+}
+
+.dates p {
+  font-size: 25px;
+  color: white;
+}
+
+.dateButton {
+  background-color: black;
+  color: white;
+  width: 100%;
+}
+
+.group {
+  background-color: #0b775b;
+  display: flex;
+  padding: 50px;
+  height: 600px;
+  gap: 40px;
+  align-items: center;
+}
+
+.group h1 {
+  font-size: 50px;
+  color: white;
+}
+
+.group p {
+  font-size: 25px;
+  color: white;
+}
+
+.groupButton {
+  background-color: black;
+  color: white;
+  width: 100%;
+}
+
+.updates {
+  height: 650px;
+  margin-top: 0;
+  padding: 50px;
+}
+
+.updates h1 {
+  font-size: 50px;
+  padding: 0;
+  margin: 0;
+}
+
+.updateCard {
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.5) 2px 2px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.updateCard h2 {
+  font-size: 40px;
+  font-weight: lighter;
+}
+.updateContainer {
+  display: flex;
+  justify-self: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.updatecontainer h1 {
+  text-align: center;
+}
+
+.updateCards {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.footer {
+  background-color: #660000;
+  color: #fff;
+  padding: 40px 20px;
+  font-size: 14px;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-left h1 {
+  margin: 0 0 15px 0;
+  font-size: 50px;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.footer-nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-nav a:hover {
+  color: #ffcccb;
+}
+
+.footer-right {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.social {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 18px;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ffcccb;
+  transform: scale(1.2);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.bottom-links {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.bottom-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.bottom-links a:hover {
+  color: #ffcccb;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-right {
+    flex-direction: column;
+    align-items: center;
+  }
+}
