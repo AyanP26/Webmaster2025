@@ -205,15 +205,12 @@ respective descriptions*/
 }
 .food1{
   vertical-align: text-top
-  display: inline-block;
 }
 .food2{
   vertical-align: text-top
-  display: inline-block;
 }
 .food3{
   vertical-align: text-top
-  display: inline-block;
 }
 .inputs{
   margin-left: 42%;
@@ -297,4 +294,33 @@ respective descriptions*/
 #back3{
   background-color: #bffff7;
   padding: 10px;
+}
+
+navbar {
+  background: #0b775b;
+  padding: 25px;
+  align-items: center;
+  display: flex;
+  margin: 0;
+}
+
+button {
+  border: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Trebuchet MS";
+  font-size: 20px;
+  justify-content: center;
+  color: white;
+  display: flex;
+  gap: 20px;
+}
+
+a{
+  text-decoration: none;
+  color: white;
 }
