@@ -117,15 +117,15 @@ their respective textboxes*/
   margin-right: 0px;
 }
 #firstpic{
-  margin: 90px;
+  margin: 50px;
 }
 
 #secondpic{
-  margin: 90px;
+  margin: 50px;
 }
 
 #thirdpic{
-  margin: 90px;
+  margin: 50px;
 }
 
 .imgs{
@@ -166,10 +166,12 @@ color:white;
 } 
 #leftdiv{
   background-color: #5F0000;
-  margin-left: 17px;
+  margin-left: 14px;
+  padding-bottom: 40px;
 }
 #rightdiv{
    background-color: #2FBC98;
+   padding-bottom: 40px;
 }
 #centerdiv{
     background-color: #D9D9D9;
