@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Willow Whisper Takeout Order</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Merriweather:wght@300&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Merriweather', serif;
+      background-color: #f7f4f1;
+      color: #2a2a2a;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 2rem;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 900px;
+      background-color: #fff9f1;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      flex-grow: 1;
+    }
+
+    h1 {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: #4b2e83;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      color: #4b2e83;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #4b2e83;
+      padding-bottom: 0.5rem;
+    }
+
+    label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .menu-item-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .item-name {
+      font-weight: bold;
+      color: #3e2c41;
+      flex: 1;
+    }
+
+    .item-desc {
+      color: #5a4e56;
+      font-size: 1rem;
+    }
+
+    .quantity {
+      width: 60px;
+      text-align: center;
+    }
+
+    .error {
+      color: red;
+      font-size: 0.9rem;
+      display: none;
+    }
+
+    button {
+      background-color: #4b2e83;
+      color: white;
+      padding: 1rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: none;
+      width: 100%;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #3a2367;
+    }
+
+    #totalCost {
+      text-align: center;
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+
+    footer {
+      width: 100%;
+      height: 60px;
+      background-color: #333;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 0.9rem;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    .section {
+      margin-top: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #e0d8d0;
+    }
+
+    .section:last-child {
+      border-bottom: none;
+    }
+
+    .menu-item {
+      margin-bottom: 0.75rem;
+    }
+
+    .menu-item label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .menu-item label input[type="checkbox"] {
+      margin-right: 0.5rem;
+    }
+
+    .menu-item label input[type="number"] {
+      width: 60px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>The Willow Whisper Takeout Order</h1>
+    <form id="orderForm" novalidate>
+      <label for="customerName">Enter your name:</label>
+      <input type="text" id="customerName" name="customerName" placeholder="Your Name" required>
+
+      <div>
+        <h2 class="section-title">Appetizers &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Quantity</h2>
+        <h2 class="section-title" style = "text-align: right;"></h2>
+        <div class="menu-item-container">
+          <span class="item-name">Delicately Rolled Vegetable Parcels ($6)&nbsp;</span>
+          <input type="number" class="quantity" data-name="Delicately Rolled Vegetable Parcels" data-price="6" min="0" value="0" onchange="updateCost()">
+        </div>
+        <div class="menu-item-container">
+          <span class="item-name">Golden Samosas ($5)&nbsp;</span>
+          <input type="number" class="quantity" data-name="Golden Samosas" data-price="5" min="0" value="0" onchange="updateCost()">
+        </div>
+        <div class="menu-item-container">
+          <span class="item-name">Crispy Cauliflower Bites ($7)&nbsp;</span>
+          <input type="number" class="quantity" data-name="Crispy Cauliflower Bites" data-price="7" min="0" value="0" onchange="updateCost()">
+        </div>
+        <div class="menu-item-container">
+          <span class="item-name">Spinach and Feta Puffs ($5)&nbsp;</span>
+          <input type="number" class="quantity" data-name="Spinach and Feta Puffs" data-price="5" min="0" value="0" onchange="updateCost()">
+        </div>
+        <div class="menu-item-container">
+          <span class="item-name">Mango Salad ($4)&nbsp;</span>
+          <input type="number" class="quantity" data-name="Mango Salad" data-price="4" min="0" value="0" onchange="updateCost()">
+        </div>
+        <div class="menu-item-container">
+          <span class="item-name">Crispy Vegan Tofu Bites ($7)&nbsp;</span>
+          <input type="number" class="quantity" data-name="Crispy Vegan Tofu Bites" data-price="7" min="0" value="0" onchange="updateCost()">
+        </div>
+        <div class="menu-item-container">
+          <span class="item-name">Mini Falafel ($5)&nbsp;</span>
+          <input type="number" class="quantity" data-name="Mini Falafel" data-price="5" min="0" value="0" onchange="updateCost()">
+        </div>
+      </div>
+
+      <div class="section">
+        <h2 class="section-title">Kids Menu</h2>
+        <div class="menu-item">
+          <label>Mini Vegetable Sushi ($4)&nbsp;&nbsp;<input type="number" class="quantity" data-name="Mini Vegetable Sushi" data-price="4" min="0" value="0" onchange="updateCost()"></label>
+        </div>
+        <div class="menu-item">
+          <label>Mini Tacos ($5)&nbsp;&nbsp;<input type="number" class="quantity" data-name="Mini Tacos" data-price="5" min="0" value="0" onchange="updateCost()"></label>
+        </div>
+        <div class="menu-item">
+          <label>Veggie Nuggets ($5)&nbsp;&nbsp;<input type="number" class="quantity" data-name="Veggie Nuggets" data-price="5" min="0" value="0" onchange="updateCost()"></label>
+        </div>
+        <div class="menu-item">
+          <label>Fruit Cup ($3)&nbsp;&nbsp;<input type="number" class="quantity" data-name="Fruit Cup" data-price="3" min="0" value="0" onchange="updateCost()"></label>
+        </div>
+        <div class="menu-item">
+          <label>Mini Pizza ($7)&nbsp;&nbsp;<input type="number" class="quantity" data-name="Mini Pizza" data-price="7" min="0" value="0" onchange="updateCost()"></label>
+        </div>
+        <div class="menu-item">
+          <label>Mac 'n' Cheese Bites ($6)&nbsp;&nbsp;<input type="number" class="quantity" data-name="Mac 'n' Cheese Bites" data-price="6" min="0" value="0" onchange="updateCost()"></label>
+        </div>
+        <div class="menu-item">
+          <label>Veggie Wraps ($6)&nbsp;&nbsp;<input type="number" class="quantity" data-name="Veggie Wraps" data-price="6" min="0" value="0" onchange="updateCost()"></label>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2 class="section-title">Beverages</h2>
+        <div class="menu-item">
+          <label>Iced Jasmine Green Tea ($3)&nbsp;&nbsp;<input type="number" class="quantity" data-name="Iced Jasmine Green Tea" data-price="3" min="0" value="0" onchange="updateCost()"></label>
+        </div>
+        <div class="menu-item">
+          <label>Lemonade ($3)&nbsp;&nbsp;<input type="number" class="quantity" data-name="Lemonade" data-price="3" min="0" value="0" onchange="updateCost()"></label>
+        </div>
+        <div class="menu-item">
+          <label>Horchata ($4)&nbsp;&nbsp;<input type="number" class="quantity" data-name="Horchata" data-price="4" min="0" value="0" onchange="updateCost()"></label>
+        </div>
+        <div class="menu-item">
+          <label>Coconut Water ($3)&nbsp;&nbsp;<input type="number" class="quantity" data-name="Coconut Water" data-price="3" min="0" value="0" onchange="updateCost()"></label>
+        </div>
+        <div class="menu-item">
+          <label>Mint Mojito ($6)&nbsp;&nbsp;<input type="number" class="quantity" data-name="Mint Mojito" data-price="6" min="0" value="0" onchange="updateCost()"></label>
+        </div>
+        <div class="menu-item">
+          <label>Green Smoothie ($5)&nbsp;&nbsp;<input type="number" class="quantity" data-name="Green Smoothie" data-price="5" min="0" value="0" onchange="updateCost()"></label>
+        </div>
+        <div class="menu-item">
+          <label>Iced Matcha Latte ($5)&nbsp;&nbsp;<input type="number" class="quantity" data-name="Iced Matcha Latte" data-price="5" min="0" value="0" onchange="updateCost()"></label>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2 class="section-title">Desserts</h2>
+        <div class="menu-item">
+          <label>Chocolate Cake ($5)&nbsp;&nbsp;<input type="number" class="quantity" data-name="Chocolate Cake" data-price="5" min="0" value="0" onchange="updateCost()"></label>
+        </div>
+        <div class="menu-item">
+          <label>Churros ($5)&nbsp;&nbsp;<input type="number" class="quantity" data-name="Churros" data-price="5" min="0" value="0" onchange="updateCost()"></label>
+        </div>
+        <div class="menu-item">
+          <label>Coconut Macaroons ($4)&nbsp;&nbsp;<input type="number" class="quantity" data-name="Coconut Macaroons" data-price="4" min="0" value="0" onchange="updateCost()"></label>
+        </div>
+        <div class="menu-item">
+          <label>Fruit Sorbet ($4)&nbsp;&nbsp;<input type="number" class="quantity" data-name="Fruit Sorbet" data-price="4" min="0" value="0" onchange="updateCost()"></label>
+        </div>
+        <div class="menu-item">
+          <label>Lemon Bars ($4)&nbsp;&nbsp;<input type="number" class="quantity" data-name="Lemon Bars" data-price="4" min="0" value="0" onchange="updateCost()"></label>
+        </div>
+        <div class="menu-item">
+          <label>Vegan Cheesecake ($6)&nbsp;&nbsp;<input type="number" class="quantity" data-name="Vegan Cheesecake" data-price="6" min="0" value="0" onchange="updateCost()"></label>
+        </div>
+        <div class="menu-item">
+          <label>Chocolate Avocado Mousse ($5)&nbsp;&nbsp;<input type="number" class="quantity" data-name="Chocolate Avocado Mousse" data-price="5" min="0" value="0" onchange="updateCost()"></label>
+        </div>
+      </div>
+
+      <div id="totalCost">Total Cost: $0.00</div>
+
+      <button type="submit">Submit Order</button>
+    </form>
+  </div>
+
+  <footer>
+    &copy; 2025 The Willow Whisper | All Rights Reserved | <br />
+    Allergen Key:&nbsp;&nbsp;- Gluten |&nbsp;&nbsp;- Soy |&nbsp;&nbsp;- Coconut |&nbsp;&nbsp;- Wheat |&nbsp;&nbsp;- Nuts |&nbsp;&nbsp;- Dairy
+  </footer>
+
+  <script>
+    let totalCost = 0;
+
+    // Store ordered items
+    let orderedItems = [];
+
+    function updateCost() {
+      totalCost = 0;
+      orderedItems = []; // Reset the ordered items list
+
+      const items = document.querySelectorAll('.quantity');
+      items.forEach(item => {
+        const name = item.getAttribute('data-name');
+        const price = parseFloat(item.getAttribute('data-price'));
+        const quantity = parseInt(item.value) || 0;
+
+        if (quantity > 0) {
+          // Add item to orderedItems array
+          orderedItems.push({ name, price, quantity });
+        }
+
+        totalCost += price * quantity;
+      });
+
+      document.getElementById('totalCost').innerText = `Total Cost: $${totalCost.toFixed(2)}`;
+    }
+
+    document.getElementById('orderForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const customerName = document.getElementById('customerName').value;
+
+      // If no name entered
+      if (!customerName) {
+        alert('Please enter your name.');
+        return;
+      }
+
+      // If no items are selected
+      if (orderedItems.length === 0) {
+        alert('Please select at least one item to order.');
+        return;
+      }
+
+      // Create the order summary
+      let orderSummary = `Thank you for your order, ${customerName}!\nYour food has been processed and will be ready for you in 25-30 minutes.\n\nItems Ordered:\n`;
+
+      orderedItems.forEach(item => {
+        orderSummary += `${item.name} - ${item.quantity} x $${item.price.toFixed(2)} = $${(item.price * item.quantity).toFixed(2)}\n`;
+      });
+
+      orderSummary += `\nTotal Cost: $${totalCost.toFixed(2)}`;
+
+      alert(orderSummary); // Display the order summary in alert
+
+      // Reset the form
+      document.getElementById('orderForm').reset();
+      totalCost = 0;
+      orderedItems = [];
+      document.getElementById('totalCost').innerText = `Total Cost: $0.00`;
+    });
+  </script>
+</body>
+</html>
