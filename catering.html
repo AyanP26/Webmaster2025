@@ -1,346 +1,146 @@
-
 <!DOCTYPE html>
-<HTML>
-<HEAD>
-  <title>
-Catering 
-</title>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="catering.css">
-</HEAD>
-<body>
-  <navbar>
-    <a href="index.html"><img src="logo.png" alt="Logo" style="width: 100px;"></a>
-    <ul>
-      <li></li>
-      <li>
-        <a href="Menus/menu.html">Menu</a>
-      </li>
-      <li>
-        <a href="gallery.html">Galleries</a>
-      </li>
-      <li>
-        <a href="Special Events/specialEvents.html">Special Events</a>
-      </li>
-      <li>
-        <a href="catering.html">Catering</a>
-      </li>
-      <li>
-        <a href="specials.html">Weekly Specials</a>
-      </li>
-      <li>
-        <a href="takeout.html">Take out</a>
-      </li>
-    </ul>
-  </navbar>
- <div class="hero-image">
-  <div class="hero-text">
-    <h1 style="font-size:50px">Catering</h1>
-    <p>The Future of Flavor: Vibrant Vegetarian Options</p>
-  </div>
-</div>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Catering</title>
+    <link rel="stylesheet" href="catering.css" />
+  </head>
+  <body>
+    <h1>Catering</h1>
 
-   <h2 id="header1">Catering Information</h2>
-   <h2>Catering Specials</h2>
-  <br>
-  <div id="maindiv">
-        <div id="div1">
-               <p id="body1"> Catering is a service we offer to our customers that allows for
-                 you to easily provide our food to large groups of people with bulk orders and large trays </p>
-        </div>
-   
-        <div id="div2">
-             <p>Catering offers an adapted menu, suited to large feast, with specialities including,
-               a make it your self station, a variety of trays based chosen by yourself, and
-                large meals based on different cuisines </p>
-        </div>
-  </div>
-<div id="back2">
-<div id="imagebox">
-    <div id="imagedivs1">
-       <img class="imgs" id="firstpic" src="fork.png" alt="Picture of Buisness BUilding">
-    </div>
-    <div id="imagedivs2">
-       <img class="imgs" id="secondpic" src="newparty.png" alt="Picture of Party Cap">
-    </div>   
-    <div id="imagedivs3">
-       <img class="imgs" id="thirdpic" src="wrose.png" alt="Picture of dove/symbol for a wedding">
-    </div>
-</div>
-<br>
-<div id="textboxbox">
-  <div id="leftdiv" class="textboxes">
-    <p id="leftmost" class="desc">
-      Offering diverse and flavorful vegetarian catering options demonstrates a commitment to inclusivity and caters to the growing 
-      demand for plant-based choices, enhancing your business's appeal to a wider clientele.
-    </p>
-  </div>
-  <div id="centerdiv"class="textboxes">
-    <p id="centermost" class="desc">
-      Catering provides a vibrant and interactive culinary experience for parties, ensuring all guests, regardless of dietary
-      restrictions, can enjoy delicious and satisfying food.
-    </p>
-  </div>
-  <div id="rightdiv" class="textboxes">
-    <p id="rightmost" class="desc">
-      A thoughtfully curated vegetarian wedding menu adds a unique and memorable touch, reflecting modern values and accommodating 
-      diverse guest needs while maintaining elegance and sophistication.
-    </p>
-  </div>
-  </div>
-
-<br>
-<br>
-
-
-
-
-
-<button class="button" id="openbutton" onclick="openForm()">Order Now</button>
-
-<div class="form-popup" id="myForm">
-  <form action="/action_page.php" class="form-container">
-    <h1>Order</h1>
-
-    <label class = "inputs" for="email"><b>Email</b></label>
-    <input class = "inputs" type="text" placeholder="Enter Email" name="email" required>
-<br>
-    <label class = "inputs" for="loc"><b>Address</b></label>
-    <input class = "inputs" type="text" placeholder="Enter Adress" name="psw" required>
-<br>
-    <label class = "inputs" for="name"><b>Name</b></label>
-    <input class = "inputs" type="text" placeholder="First, Last" name="loc" required>
-<br>
-    <label class = "inputs" for="name"><b>Phone Number</b></label>
-    <input class = "inputs" type="number" placeholder="012-345-6789" name="p#" required>
-<br>
-    <label class = "inputs" for="name"><b>Occassion</b></label>
-    <input class = "inputs" type="text" placeholder="Event" name="event" required>
-<br>
-  <label class = "inputs" for="Dish Type"><b>Occassion</b></label><br>
-  <select class = "inputs" name="Dish" id="dish">
-     <option value="">Dish Option</option>
-    <option value="dish1">Make it yourself </option>
-    <option value="dish2">Trays</option>
-    <option value="dish3">Large Dish</option>
-  </select>
-<br>
-    <label class = "inputs" for="more"><b>Further Specification</b></label>
-    <input class = "inputs" type="text" placeholder="Food Name" name="more" required>
-<br>
-    <button class="button" id="submitbut"type="submit" class="btn">Submit</button>
-    <br>
-    <button class="button" id="closebut" type="button" class="btn cancel" onclick="closeForm()">Close</button>
-    
-
-  </form>
-</div>
-
-<script>
-  
-function openForm() {
-  document.getElementById("myForm").style.display = "block";
-}
-
-function closeForm() {
-  document.getElementById("myForm").style.display = "none";
-}
-
-  
-</script>
-
-
-</div>
-
-<div id="back3">
-  <br>
-  <br>
-</select>
-<br>
- <img class="foodpics" class="food1" src="sushi.png" alt="Picture of Dish 1">
-<ul class="food1" id = "desc1">
-
-<li>Large-Format Presentation: Designed to serve twelve guests, creating a visually stunning
-<br>and communal dining experience.</li>
-<li>Variety of Vegetarian Sushi Rolls:</li>
-</ul>
-<br>
-
-<a class="menubut" href="menu.html">
-     View Menu
-</a>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<img class="foodpics" class="food2" src="lettuce.png" alt="Picture of Dish 2">
-<ul class="food2" id = "desc2">
-
-<li>Variety of Bases</li>
-<li>Flavorful Fillings:</li>
-<li>Selection of Sauces:</li>
-<li>Personalized Wraps: Allows guests to create their own customized meals</li>
-</ul>
-<br>
-
-<a class="menubut" href="menu.html">
-     View Menu
-</a>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<img class="foodpics" class="food3" src="trays.png" alt="Picture of Dish 3">
-<p>Interactive "Build-Your-Own" Station: Creates an engaging and customizable
-meal experience with a....</p>
-<ul class="food3" id = "desc3">
-<li>Diverse Vegetarian Trays: 
-Each tray highlights a unique cuisine for a flavorful catering spread.</li>
-<li>Global Vegetarian Feast: Offers a well-rounded and globally inspired 
-culinary experience.</li>
-</ul>
-<br>
-
-<a class="menubut" href="menu.html">
-     View Menu
-</a>
-<br>
-<br>
-<br>
-<br>
-<br>
-                            </div>
-<h1 id="faq">FAQ's</h1>
-
-<br>
-<button class="que" onclick="openAns1()">Do you offer different service styles?</button>
-
-<div id="ans1">
-    <p>Yes, we offer trays, build-it-yourself stations, buffets, platters, and more</p>
-</div>
-
-<script>
-  
-  function openAns1() {
-  if(document.getElementById("ans1").style.display == "block"){
-  document.getElementById("ans1").style.display = "none";
-  }
-  else{
-    document.getElementById("ans1").style.display = "block";
-  }
-}
-  
-</script>
-
-
-<br>
-
-
-<button class="que" onclick="openAns2()">Can you accommodate dietary restrictions and allergies?</button>
-
-<div id="ans2">
-    <p>Yes, as we prize our inclusivity through diverse meals, we will happily accommodate with prior notice</p>
-</div>
-
-<script>
-  
-  function openAns2() {
-  if(document.getElementById("ans2").style.display == "block"){
-  document.getElementById("ans2").style.display = "none";
-  }
-  else{
-    document.getElementById("ans2").style.display = "block";
-  }
-}
-  
-</script>
-
-
-<br>
-
-
-<button class="que" onclick="openAns3()">What information do you need from me to provide an accurate quote?</button>
-
-<div id="ans3">
-    <p>After filling uot require boxes in the order form, one can expect a quote within 3 buisness days</p>
-</div>
-
-<script>
-  
-  function openAns3() {
-  if(document.getElementById("ans3").style.display == "block"){
-  document.getElementById("ans3").style.display = "none";
-  }
-  else{
-    document.getElementById("ans3").style.display = "block";
-  }
-}
-  
-</script>
-
-<br>
-
-
-<button class="que" onclick="openAns4()">Do you have minimum or maximum guest counts?</button>
-
-<div id="ans4">
-    <p>We have no limit of number of guests, however we reccommend following the intending serving ratios listed on our menu </p>
-</div>
-
-<script>
-  
-  function openAns4() {
-  if(document.getElementById("ans4").style.display == "block"){
-  document.getElementById("ans4").style.display = "none";
-  }
-  else{
-    document.getElementById("ans4").style.display = "block";
-  }
-}
-  
-</script>
-
-<footer class="footer">
-  <div class="footer-top">
-    <div class="footer-left">
-      <h1>Willow Whispers</h1>
-      <nav class="footer-nav">
-        <a href="about.html">About</a>
-        <a href="Menus/menu.html">Menu</a>
-        <a href="gallery.html">Gallery</a>
-      </nav>
-    </div>
-    <div class="footer-right">
-      <div class="social">
-        <p>Follow Us</p>
-        <div class="social-icons">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-        </div>
+    <div class="info-section">
+      <div class="info-box">
+        <h2>What is Catering?</h2>
+        <p>
+          Catering is a service we offer that allows you to easily provide our
+          food to large groups with bulk orders and trays.
+        </p>
       </div>
-      <div class="contact">
-        <p>Contact Us</p>
-        <p>📞 216-281-2281</p>
+      <div class="info-box">
+        <h2>Catering Specialties</h2>
+        <p>
+          Specialty options include make-your-own stations, custom trays, and
+          large meals based on different cuisines.
+        </p>
       </div>
     </div>
-  </div>
-  <div class="footer-bottom">
-    <p>4201 Stringfellow Rd, Greenbriar, VA 20151</p>
-    <div class="bottom-links">
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms and Conditions</a>
+
+    <div class="services">
+      <div class="service-card business">
+        <img src="fork.png" alt="Business Catering" />
+        <h3>Business</h3>
+        <p>
+          We offer catering designed for office meetings, conferences, and
+          corporate events, ensuring every employee or client enjoys delicious
+          food.
+        </p>
+      </div>
+      <div class="service-card party">
+        <img src="newparty.png" alt="Party Catering" />
+        <h3>Parties</h3>
+        <p>
+          Organize your birthday parties, holiday gatherings, or casual
+          get-togethers with vibrant, customizable vegetarian options.
+        </p>
+      </div>
+      <div class="service-card weddings">
+        <img src="wrose.png" alt="Wedding Catering" />
+        <h3>Weddings</h3>
+        <p>
+          A thoughtfully curated vegetarian wedding menu adds a special touch,
+          accommodating diverse guest needs in an elegant setting.
+        </p>
+      </div>
     </div>
-  </div>
-</footer>
 
+    <div class="order-section">
+      <button onclick="openForm()">Order Now</button>
+    </div>
 
+    <h2 class="featured-header">Featured Options</h2>
+    <div class="items">
+      <div class="featured-item">
+        <img src="images/sushi.png" alt="Vegetarian Sushi" />
+        <div>
+          <ul>
+            <li>Large-Format Presentation for twelve guests.</li>
+            <li>Variety of Vegetarian Sushi Rolls.</li>
+          </ul>
+          <center>
+            <a href="menu.html" class="view-menu-btn">View Menu</a>
+          </center>
+        </div>
+      </div>
 
-</body>
-</HTML>
+      <div class="featured-item">
+        <img src="images/lettuce.png" alt="Wraps" />
+        <div>
+          <ul>
+            <li>Variety of Bases and Fillings.</li>
+            <li>Customizable Wraps with selection of sauces.</li>
+          </ul>
+          <center>
+            <a href="menu.html" class="view-menu-btn">View Menu</a>
+          </center>
+        </div>
+      </div>
+
+      <div class="featured-item">
+        <img src="images/trays.png" alt="Vegetarian Trays" />
+        <div>
+          <ul>
+            <li>Interactive Build-Your-Own Stations.</li>
+            <li>Global Vegetarian Feast featuring different cuisines.</li>
+          </ul>
+          <center>
+            <a href="menu.html" class="view-menu-btn">View Menu</a>
+          </center>
+        </div>
+      </div>
+    </div>
+
+    <h2 id="faq-title">FAQ's</h2>
+
+    <div class="faq">
+      <button onclick="toggleAnswer('ans1')">
+        Do you offer different service styles?
+      </button>
+      <div id="ans1" class="answer">
+        Yes, we offer trays, build-it-yourself stations, buffets, platters, and
+        more.
+      </div>
+
+      <button onclick="toggleAnswer('ans2')">
+        Can you accommodate dietary restrictions and allergies?
+      </button>
+      <div id="ans2" class="answer">
+        Yes, we happily accommodate dietary needs with prior notice.
+      </div>
+
+      <button onclick="toggleAnswer('ans3')">
+        What information do you need for an accurate quote?
+      </button>
+      <div id="ans3" class="answer">
+        After filling out the order form, expect a quote within 3 business days.
+      </div>
+
+      <button onclick="toggleAnswer('ans4')">
+        Do you have minimum or maximum guest counts?
+      </button>
+      <div id="ans4" class="answer">
+        No strict limit, but we recommend following the intended serving ratios.
+      </div>
+    </div>
+
+    <script>
+      function toggleAnswer(id) {
+        const ans = document.getElementById(id);
+        if (ans.style.display === "block") {
+          ans.style.display = "none";
+        } else {
+          ans.style.display = "block";
+        }
+      }
+    </script>
+  </body>
+</html>
