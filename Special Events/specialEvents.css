@@ -97,70 +97,31 @@ header {
     text-align: center;
   }
   /*Calendar*/
-  body {
-            background-color: #eef7f6;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
+ 
+   
+  .calendar{ 
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+    }
 
-        /* Layout */
-        .container {
-            display: flex;
-            justify-content: center;
-            height: 100vh;
-            align-items: center;
-            padding: 20px;
-        }
-        
-        .content {
-            flex-grow: 1;
-            max-width: 90vw;
-            min-width: 800px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-            border-radius: 20px;
-            background: #ffffff;
-            padding: 20px;
-            transition: all 0.3s ease;
-        }
+.hero{
+    width: 100%;
+    height: 100%;
+    background-color: green;
+    position: relative;
+}
 
-        h1 {
-            text-align: center;
-            margin-bottom: 30px;
-            color: #2c3e50;
-            font-size: 2.5rem;
-        }
-
-        /* Make sure event title shows fully */
-        .evo-calendar .evo-month .evo-calendar-events ul li {
-            white-space: normal;
-            overflow: hidden;
-            word-wrap: break-word;
-            text-overflow: ellipsis;
-        }
-
-        /* Shrink the calendar when an event is clicked */
-        .calendar-shrunk {
-            transform: scale(0.85);
-            margin-top: 50px;
-        }
-
-        .calendar-expanded {
-            max-width: 1500px;
-        }
-
-        /* Button to collapse/expand the calendar */
-        .calendar-toggle-btn {
-            display: inline-block;
-            background-color: #2c3e50;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1rem;
-            margin: 20px auto;
-            text-align: center;
-        }
+#calendar{
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
 
 navbar {
   background: #0b775b;
